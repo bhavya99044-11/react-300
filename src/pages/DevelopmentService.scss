@@ -1,0 +1,10 @@
+@use '../styles/variables' as v;
+
+.development-service{
+    padding-left: v.$screen-padding;
+    padding-right: v.$screen-padding;
+    background-color: red !important;
+    color: #ffffff;
+    z-index: 50;
+    margin-top: 160px;
+}

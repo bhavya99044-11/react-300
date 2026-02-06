@@ -1,0 +1,23 @@
+$step: 4px;
+$max: 25;
+
+@for $i from 0 through $max {
+  .m-#{$i}  { margin:        $i * $step; }
+  .mt-#{$i} { margin-top:    $i * $step; }
+  .mr-#{$i} { margin-right:  $i * $step; }
+  .mb-#{$i} { margin-bottom: $i * $step; }
+  .ml-#{$i} { margin-left:   $i * $step; }
+}
+
+@for $i from 0 through $max {
+  .p-#{$i}  { padding:        $i * $step; }
+  .pt-#{$i} { padding-top:    $i * $step; }
+  .pr-#{$i} { padding-right:  $i * $step; }
+  .pb-#{$i} { padding-bottom: $i * $step; }
+  .pl-#{$i} { padding-left:   $i * $step; }
+}
+
+
+@for $i from 0 through $max {
+    .gap-#{$i}  { gap:        $i * $step; }
+  }

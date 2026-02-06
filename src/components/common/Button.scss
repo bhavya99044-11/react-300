@@ -1,0 +1,27 @@
+@use '../../styles/mixins' as *;
+
+button {
+    padding: 20px 37px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    background: linear-gradient(135deg, #ED184F, #B20A36);
+    cursor: pointer;
+
+    --cut: 18px;
+
+    clip-path: polygon(
+      0% 0%,               
+      105% 0%,                    
+      105% calc(100% - var(--cut)),
+      calc(100% - var(--cut)) 105%,
+      0% 100%
+    );
+  }
+
+  @include between(320px,680px){
+    button{
+        padding: 10px 25px;
+
+    }
+  }

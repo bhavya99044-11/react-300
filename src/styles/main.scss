@@ -1,0 +1,73 @@
+@use './variables' as v;
+@use './spacing';
+@use './mixins' as *;
+
+body{
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.app{
+  // max-width:v.$screen  -width;
+  margin: auto;
+  height: 100%;
+  position: relative;
+}
+
+.main{
+  background-color: #000000;
+  height: 100vh;
+  width: auto;
+  position: relative;
+  background-image: url('cam-bueno-orco-rookies-low 1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+
+.main::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.main > * {
+  position: relative;
+  z-index: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.flex{
+  display: flex;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.flex-row{
+  flex-direction: row;
+}
+
+
+.flex-col{
+  flex-direction: column;
+}
+
