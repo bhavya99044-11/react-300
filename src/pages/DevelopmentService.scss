@@ -1,10 +1,179 @@
 @use '../styles/variables' as v;
+@use '../styles/mixins' as *;
+
 
 .development-service{
     padding-left: v.$screen-padding;
     padding-right: v.$screen-padding;
-    background-color: red !important;
     color: #ffffff;
     z-index: 50;
     margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+
+    .service-caraousel{
+        width: 100%;
+        margin-top: 120px;
+
+        .service-content{
+            border: 1.5px solid white;
+            border-radius: 40px;
+            padding:195px  60px;
+            display: flex;
+            gap: 60px;
+            flex-direction: row;
+
+            .service-block{
+                cursor: pointer;
+                position: relative;
+                background-color: #4FB1C9;  
+                width: 370px;
+                height: 240px;
+                .service-image{
+                    img{
+                        position: absolute;
+                        left: 29px;
+                        top: -45px;           
+                    }
+                }
+                p{
+                    position: absolute;                                      
+                    right: 30px;
+                    bottom: 30px;
+                    margin-top: auto;
+                    font-family: 'Satoshi';
+                    max-width: 142px;                    
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+
+            }
+        }
+    }
+
+    .remote{
+        margin: auto;
+        text-align: center;
+        position: relative;
+        div{
+            width: fit-content;
+            .left-arrow{
+                font-size: 60px;
+                position: absolute;
+                top: 45%;
+                left: 17%;
+            }
+            .right-arrow{
+                position: absolute;
+                font-size: 60px;
+                top: 45%;
+                right: 17%;
+            }
+            .left-arrow:hover,.right-arrow:hover{
+                cursor: pointer;
+                border-radius: 100%;
+                background-color: #ED184F;
+            }
+        }
+    }
+
+    .swiper-button-prev,.swiper-button-next,.swiper-navigation-icon{
+        opacity: 0;
+    }
+
+}
+
+
+@include between(680px,1000px)
+{
+    .development-service{
+        padding-left: v.$responsive-screen-padding;
+        padding-right: v.$responsive-screen-padding;
+        .service-caraousel{
+            margin-top: 80px;
+            .service-content{
+                padding:150px  40px;
+                .service-block{
+                   max-width: 400px;
+                    max-height: 240px;
+                    .service-image{
+                        img{
+                            position: absolute;
+                            left: 31px;
+                            top: -45px;   
+                            width: 170px;
+                            height: 170px;
+                        }
+                    }                    
+                    p{
+                        max-width: 142px;                    
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
+    
+                }
+            }
+        }
+
+
+  
+    }
+
+}
+
+
+@include between(320px,680px)
+{
+    .development-service{
+        padding-left: v.$responsive-screen-padding;
+        padding-right: v.$responsive-screen-padding;
+        .service-caraousel{
+            margin-top: 50px;
+            .service-content{
+                padding:100px  30px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+    
+                .service-block{
+                    position: relative;
+                    background-color: #4FB1C9;   
+                    width: 100%;
+                    max-height: 240px;                   
+                     .service-image{                        
+                        img{
+                            position: absolute;
+                            left: 31px;
+                            top: -45px;     
+                            width: 130px;
+                            height: 130px;      
+                        }
+                    }
+                    p{
+                        max-width: 142px;                    
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
+    
+                }
+            }
+        }
+
+        .remote{
+            margin: auto;
+            text-align: center;
+            position: relative;
+            div{
+                img{
+                    width: 290px;
+                    height: 210px;
+                }
+                .left-arrow,.right-arrow{
+                    font-size: 45px;
+                }
+            }
+        }
+    }
+
 }

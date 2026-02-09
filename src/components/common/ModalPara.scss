@@ -1,0 +1,31 @@
+@use '../../styles/mixins' as *;
+
+.modal-para{
+    font-weight: 500;
+    font-style: medium;
+    font-size: 20px;
+    letter-spacing: 1%;
+    max-width: 645px;
+    word-break: normal;
+    margin-top: 30px;
+    color: white;
+    font-family: 'Anek', sans-serif;
+}
+
+@include between(680px,980px)
+{
+    .modal-para{
+        margin-top: 25px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+
+@include between(320px,680px)
+{
+    .modal-para{
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}

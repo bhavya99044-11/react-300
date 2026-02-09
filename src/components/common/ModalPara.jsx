@@ -1,8 +1,9 @@
 import React from 'react'
+import './ModalPara.scss'
 
 const ModalPara = ({text}) => {
   return (
-    <div>{text}</div>
+    <div className='modal-para'>{text}</div>
   )
 }
 

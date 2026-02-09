@@ -1,8 +1,11 @@
 import React from 'react'
+import './ModalHeading.scss'
 
 const ModalHeading = ({text}) => {
   return (
-    <div>{text}</div>
+    <div className='modal-heading'>
+      {text}
+    </div>
   )
 }
 

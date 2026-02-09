@@ -1,10 +1,20 @@
 @use './variables' as v;
 @use './spacing';
 @use './mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Anek:wdth,wght@75..125,100..800&display=swap');
+@import '.././assets/style.css';
 
 body{
   overflow-x: hidden;
   background-color: black;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../assets/fonts/fonts/Satoshi-Bold.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 .app{
