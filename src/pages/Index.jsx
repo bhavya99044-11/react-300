@@ -3,6 +3,7 @@ import Home from './Home'
 import InfiniteCaraousel from '../components/common/InfiniteCaraousel'
 import Caraousel from './Caraousel'
 import DevelopmentService from './DevelopmentService'
+import DevelopmentWork from './DevelopmentWork'
 
 const Index = () => {
   return (
@@ -10,6 +11,7 @@ const Index = () => {
         <Home/>
         <Caraousel/>
         <DevelopmentService/>
+        <DevelopmentWork/>
     </>
   )
 }

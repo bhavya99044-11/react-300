@@ -1,0 +1,71 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as *;
+
+.development-work{
+    margin-top: 160px;
+    padding-left: v.$screen-padding;
+    margin-top: 160px;
+    
+    .devlopment-para{
+        padding-right: 158px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+    }
+
+    .sub-development{
+        margin-top: 117px;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        gap:87px;
+        .slider-text{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+           width: 233px;
+            h3{
+                    font-size: 20px;
+            }
+            p{
+                margin-top: 20px;
+                font-size: 18px;
+                letter-spacing: 1%;
+                font-weight: 500;
+                line-height: 100%;
+                max-width: 235px;
+            }
+        }
+        .slider{
+            // overflow: hidden;
+            border: 1px solid red;
+            max-width: 1440px; 
+            margin-left: 1px; 
+ 
+            .swiper-wrapper{
+                // gap: 30px;
+                .swiper-slide{
+                    // width: 220px !important;    
+                    overflow: hidden;
+                    box-sizing: border-box;
+                }
+                
+                .swiper-slide:not(.swiper-slide-active) img{
+                    height: 100%;
+                    width: 220px;
+                    object-fit: none;
+                    object-position: left;
+                    
+                }
+            }      
+            .swiper-slide.swiper-slide-active{
+                width: 400px !important;
+                transition: width 0.3s ;
+                z-index: 2;
+                object-fit: contain  !important;
+            }     
+              
+        }
+
+    }
+}

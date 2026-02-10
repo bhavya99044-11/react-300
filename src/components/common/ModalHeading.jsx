@@ -3,8 +3,7 @@ import './ModalHeading.scss'
 
 const ModalHeading = ({text}) => {
   return (
-    <div className='modal-heading'>
-      {text}
+    <div className='modal-heading'  dangerouslySetInnerHTML={{ __html: text }}>
     </div>
   )
 }
