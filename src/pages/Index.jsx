@@ -4,14 +4,16 @@ import InfiniteCaraousel from '../components/common/InfiniteCaraousel'
 import Caraousel from './Caraousel'
 import DevelopmentService from './DevelopmentService'
 import DevelopmentWork from './DevelopmentWork'
+import HireDeveloper from './HireDeveloper'
 
 const Index = () => {
   return (
     <>
         <Home/>
-        <Caraousel/>
+        {/* <Caraousel/>
         <DevelopmentService/>
-        <DevelopmentWork/>
+        <DevelopmentWork/> */}
+        <HireDeveloper/>
     </>
   )
 }

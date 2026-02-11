@@ -3,7 +3,7 @@ import './ModalPara.scss'
 
 const ModalPara = ({text}) => {
   return (
-    <div className='modal-para'>{text}</div>
+    <div className='modal-para' dangerouslySetInnerHTML={{ __html: text }}></div>
   )
 }
 
