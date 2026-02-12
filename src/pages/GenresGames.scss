@@ -1,0 +1,116 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as *;
+
+.genres-games{
+    max-width: 1600px;
+    width: 82.5%;
+    margin:0 auto;
+}
+
+.genres-pages{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+
+.genres-pages{
+    .genres-caraousel{
+
+        margin-top: 97px;
+        .genres-swiper{
+            padding-left: 9%;
+        }
+        .game-box{
+            width: 233px;
+            height: 233px;
+            background-color: #262626;
+            // background: linear-gradient(to right, #ED184F, #B20A36);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+
+            .bg-image{
+                position: absolute;
+                left: 0;     
+                opacity: 0;           
+            }
+
+        }
+        .swiper-slide.swiper-slide-active{
+            .game-box{
+                background: linear-gradient(to right, #ED184F, #B20A36);
+
+                .bg-image{
+                    opacity: 1;
+                }
+            }
+
+
+        }
+    }
+
+}
+
+@include between(680px,1000px)
+{
+    .genres-games{
+        text-align: center;
+    }
+
+    .genres-pages{
+        .genres-caraousel{
+
+            margin-top: 70px;
+            .genres-swiper{
+                padding-left: 0%;
+                .swiper-slide{
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .geners-swiper{
+                padding-left: 8%;
+                .game-box{
+                    width: 180px;
+                    height: 180px;
+                    gap: 12px;
+                }
+            }
+        }
+    }
+}
+
+@include between(320px,680px)
+{
+    .genres-games{
+        text-align: center;
+    }
+
+    .genres-pages{
+        .genres-caraousel{
+
+            margin-top: 45px;
+            .genres-swiper{
+                padding-left: 0%;
+                .swiper-slide{
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .game-box{
+                width: 130px;
+                height: 130px;
+                gap: 8px;
+            }
+        }
+    }
+}

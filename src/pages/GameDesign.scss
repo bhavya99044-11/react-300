@@ -1,0 +1,95 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as *;
+
+.game-design{
+    max-width: 1600px;
+    width: 82.5%;
+    margin:0 auto;
+    color: white;
+
+    .game-design-caraousel{
+        flex-wrap: wrap; 
+        margin-top: 90px;
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+        .game-box{
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items:center ;
+            gap: 35px;
+            .image-box{
+                height: 100px;
+                width: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            p{
+                margin: 0 auto;
+                text-align: center;
+                font-size: 16px;
+                font-family: 'Excon';
+                font-weight: 500;
+            }
+        }
+    }
+}
+@include between(680px,1000px)
+{
+    .game-design{
+        width: 90%;
+
+        .game-design-caraousel{
+            flex-wrap: nowrap;
+            overflow-x: auto; 
+            margin-top: 70px;
+            gap: 50px;
+            justify-content: flex-start;
+
+            .game-box{
+                min-width: 120px; 
+                gap: 25px;
+
+                .image-box{
+                    height: 80px;
+                    width: 80px;
+                }
+
+                span{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+@include between(320px,680px)
+{
+    .game-design{
+        width: 92%;
+        text-align: center;
+
+        .game-design-caraousel{
+            flex-wrap: nowrap;
+            overflow-x: auto; 
+            margin-top: 50px;
+            gap: 30px;
+            justify-content: flex-start;
+
+            .game-box{
+                min-width: 120px; 
+                gap: 15px;
+
+                .image-box{
+                    height: 65px;
+                    width: 65px;
+                }
+
+                span{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

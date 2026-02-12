@@ -1,10 +1,12 @@
 import React from 'react'
 import './ModalPara.scss'
 
-const ModalPara = ({text}) => {
+const ModalPara = ({text,width}) => {
   return (
-    <div className='modal-para' dangerouslySetInnerHTML={{ __html: text }}></div>
+    <div style={{
+      maxWidth:width
+    }} className='modal-para' dangerouslySetInnerHTML={{ __html: text }}></div>
   )
 }
 
-export default ModalPara
+export default ModalPara 

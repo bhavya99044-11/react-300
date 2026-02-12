@@ -1,3 +1,15 @@
+@use '../styles/mixins' as *;
+@use '../styles/variables' as v;
+
 .overflow-hidden{
     overflow-x: hidden;
+}
+
+.pages{
+    display: flex;
+    flex-direction: column;
+    gap:v.$page-gap;
+    width: 100%;
+    justify-content: center;
+    
 }

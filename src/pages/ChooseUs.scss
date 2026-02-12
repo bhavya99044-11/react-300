@@ -1,0 +1,143 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as *;
+
+.choose-us{
+    max-width: 1600px;
+    width: 82.5%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 94px;
+    color: white;
+
+    .description{
+        button{
+            margin-top: 45px;
+        }
+    }
+
+    .choose-box{
+        background: url('/square-frame.png');
+        padding: 42px;
+        display: flex;
+        flex-direction: column;
+        .box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 279px;
+            height: 279px;
+            background-color: #094FA4;
+            flex-direction: column;
+            h2{
+                font-family: 'Excon';
+                font-size: 64px;
+                font-weight: 700;
+            }
+            h3{
+                font-weight: 500;
+                font-size: 20px;
+                font-family: 'Anek Odia';
+            }
+        }
+        .empty-box{
+            opacity:0;
+        }
+
+        .box-first{
+            display: flex;
+            flex-direction: row;
+        }
+        .box-second{
+            display: flex;
+            flex-direction: row;
+        }
+
+    }
+
+}
+
+@include between(680px, 1200px) {
+    .choose-us {
+      flex-direction: column;
+      gap: 50px;
+      width: 90%;
+
+      .description{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      
+      .choose-box {
+      align-items: center;
+  
+      .box {
+        width: 200px;
+        height: 220px;
+        
+        h2 {
+          font-size: 48px;
+        }
+        
+        h3 {
+            font-size: 18px;
+        }
+    }
+}
+}
+  }
+
+  @include between(320px, 680px) {
+  .choose-us {
+    flex-direction: column;
+    width: 95%;
+    gap: 40px;
+    
+    .choose-box {
+        padding: 20px;
+    align-items: center;
+
+    .box-first{
+        margin-bottom: 20px;
+    }
+
+    .box-first,
+    .box-second {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .empty-box{
+        display: none;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 250px;
+      height: 200px;
+      padding: 10px;
+      
+      h2 {
+        font-size: 40px;
+    }
+
+      h3 {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+}
+
+.description {
+    text-align: center;
+    
+    button {
+        margin-top: 30px;
+    }
+}
+}
+}
+
+  
