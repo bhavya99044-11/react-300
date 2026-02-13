@@ -1,50 +1,81 @@
-.carousel{
-    background-color: #1B1B1B;
-    transform: rotate(-3deg) translateX(-3px); 
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 1);
+@use '../../styles/mixins' as *;
 
+.carousel {
+  background-color: #1B1B1B;
+  transform: rotate(-3deg) translateX(-3px);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 1);
+  padding: 39px 0;
+}
+
+.card{
+  rotate: 3deg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .group {
-    will-change: transform;
-    animation: scrolling 10s linear infinite;
+  display: flex;
+  gap: 100px;
+  width: max-content;   // important
+  animation: scroll 20s linear infinite;
 }
 
-  @keyframes scrolling {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@include between(320px, 680px) {
 
   .carousel {
-    margin: 0 auto;
-    padding: 20px 0;
-    width: 100.3%;
-    overflow: hidden;
-    display: flex;
-  }
-
-  .card {
-    width: 100%;
-    border-radius: 24px;
-    padding: 5px;
-    font-size: xx-large;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .carousel {
-    > * {
-      flex: 0 0 100%;
-    }
+    padding: 25px 0;
+    transform: rotate(0deg) translateX(-2px);
   }
 
   .group {
-    display: flex;
-    gap: 20px;
-    padding-right: 20px;
+    gap: 0px;              
+    animation: scroll 15s linear infinite; 
   }
+
+  .card {
+    rotate: 4deg;
+    padding-right: 50px;
+  }
+
+  .card  {
+    width: 100px;        
+    height: 30px;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+@include between(680px, 1000px) {
+
+  .carousel {
+    padding: 35px 0;
+    transform: rotate(0deg) translateX(-3px);
+  }
+
+  .group {
+    gap: 70px;               
+    animation: scroll 18s linear infinite;
+  }
+  .card {
+    rotate: 4deg;
+  }
+
+  .card img {
+    width: 150px;
+    height: 50px;
+  }
+}

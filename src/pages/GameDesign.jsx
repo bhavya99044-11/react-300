@@ -9,7 +9,7 @@ const GameDesign = () => {
         <ModalHeading text="Game Design & </br> Development Tools" />
         <ModalPara width="567px" text="Apart from engaging features and high-quality graphics, we use state-of-the-art tools and technologies to turn your concept into an interesting game."/>
 
-        <div className='game-design-caraousel'>
+        <div className='game-design-caraousel hide-scrollbar'>
             <div className='game-box'>
                 <div className='image-box'>
                     <img src="unity.png"/>

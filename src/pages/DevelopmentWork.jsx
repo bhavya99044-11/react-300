@@ -27,10 +27,12 @@ const DevelopmentWork = () => {
 
   return (
     <div className="development-work">
-      <ModalHeading text="Our Game </br> Development Work" />
-      <div className="devlopment-para">
-        <ModalPara text="Mind Inventory is a game development studio that builds outstanding games in 2D and 3D dimensions." />
-        <Button text="Request a quote" />
+      <div className="context">
+        <ModalHeading text="Our Game </br> Development Work" />
+        <div className="devlopment-para">
+          <ModalPara width="643px" text="Mind Inventory is a game development studio that builds outstanding games in 2D and 3D dimensions." />
+          <Button text="Request a quote" />
+        </div>
       </div>
       <div className="sub-development">
         <div className="slider-text">
@@ -44,7 +46,20 @@ const DevelopmentWork = () => {
             modules={[Pagination]}
             loop={true}
             spaceBetween={30}
-            slidesPerView={5.9}
+            breakpoints={{
+              320: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+              },
+              680: {
+                slidesPerView: 3,
+                spaceBetween: 25,
+              },
+              1000: {
+                slidesPerView: 5.9,
+                spaceBetween: 30,
+              },
+            }}
             speed={800}
             watchSlidesProgress={true}
             onTransitionEnd={(item) => handleSliderChange(item)}

@@ -13,12 +13,12 @@ import ChooseUs from './ChooseUs'
 
 const Index = () => {
   return (
-    <div className='pages'>
+    <div className='pages hide-scrollbar'>
         <Home/>
-        {/* <Caraousel/>
+        <Caraousel/>
         <DevelopmentService/>
-        <DevelopmentWork/> */}
-        {/* <HireDeveloper/> */}
+        <DevelopmentWork/>
+        <HireDeveloper/>
         <GenresGames/>
         <GameDesign/>
         <Conversation/>

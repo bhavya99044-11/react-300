@@ -1,3 +1,4 @@
+@use '../styles/mixins' as *;
 
 .caraousel-wrapper{
     position: relative;
@@ -29,13 +30,57 @@
     .caraousel-left{
         position: absolute;
         bottom: 0px;
+        top: -5px;
         overflow: hidden;
-        transform: rotate(4deg);
+        transform: rotate(5deg);
         background-color: #1B1B1B;
-        width: 100.3%;   
-        left: -1px;
-        height: 80px;
+        width: 101%;   
+        left: -10px;
+        height: 120px;
+    }   
+  }
+}
+
+@include between(320px, 680px) {
+
+    .caraousel-page {
+  
+      .black-shadow {
+        height: 120px;
+        border-radius: 60px;
+        filter: blur(12px);
+      }
+  
+      &::before {
+        border-radius: 60px;
+        filter: blur(12px);
+      }
+  
+      .caraousel-left {
+        display: none;
+      }
     }
-    
-}
-}
+  }
+  
+
+@include between(680px, 1000px) {
+
+    .caraousel-page {
+  
+      .black-shadow {
+        height: 150px;
+        border-radius: 80px;
+        filter: blur(16px);
+      }
+  
+      &::before {
+        border-radius: 80px;
+        filter: blur(16px);
+      }
+  
+      .caraousel-left {
+        display: none;
+      }
+    }
+  }
+  

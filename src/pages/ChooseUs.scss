@@ -27,7 +27,8 @@
             justify-content: center;
             width: 279px;
             height: 279px;
-            background-color: #094FA4;
+            cursor: pointer;
+            background: linear-gradient(to right, #252626, #0D0D0D);
             flex-direction: column;
             h2{
                 font-family: 'Excon';
@@ -40,7 +41,11 @@
                 font-family: 'Anek Odia';
             }
         }
+        .box:hover{
+            background: #094FA4 !important;
+        }
         .empty-box{
+            cursor: default;
             opacity:0;
         }
 
@@ -52,20 +57,18 @@
             display: flex;
             flex-direction: row;
         }
-
     }
-
 }
 
 @include between(680px, 1200px) {
     .choose-us {
       flex-direction: column;
       gap: 50px;
-      width: 90%;
+      width: 82.5%;
 
       .description{
         display: flex;
-        align-items: center;
+        // align-items: center;
         flex-direction: column;
       }
 

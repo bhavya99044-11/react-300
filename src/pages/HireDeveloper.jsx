@@ -17,15 +17,19 @@ const HireDeveloper = () => {
     <div className="hire-developer">
       <div className="container">
         <ModalHeading text="Hire Game Developers </br> As Per Your Need" />
-        <ModalPara text="Simple & Transparent Pricing | Fully Signed NDA | Code Security |</br> Easy Exit Policy" />
+        <ModalPara width="567px" text="Simple & Transparent Pricing | Fully Signed NDA | Code Security | Easy Exit Policy" />
         <div className="content">
         <Swiper
             modules={[Pagination, FreeMode]}
-            centeredSlides={true}
             watchSlidesProgress={true}
-            breakpoints={{
+            breakpoints={{         
               0: {
-                slidesPerView: 1,
+                slidesPerView: 0.5,
+                centeredSlides: false,
+                spaceBetween:20,
+              },
+              680: {
+                slidesPerView: 1.5,
                 centeredSlides: true,
               },
               1000: {
@@ -40,7 +44,7 @@ const HireDeveloper = () => {
           >
             <SwiperSlide>
               <div className="description">
-                <h2>$23</h2>
+                <h2>$30</h2>
                 <h3>Hourly (USD)</h3>
                 <span className="dash-line" />
                 <div>
@@ -70,7 +74,7 @@ const HireDeveloper = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="description">
-                <h2>$23</h2>
+                <h2>$13</h2>
                 <h3>Hourly (USD)</h3>
                 <span className="dash-line" />
                 <div>

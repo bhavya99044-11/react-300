@@ -2,43 +2,47 @@
 @use '../styles/mixins' as *;
 
 .development-work{
-    margin-top: 160px;
-    padding-left: v.$screen-padding;
-    margin-top: 160px;
-    
-    .devlopment-para{
-        padding-right: 158px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;        
+    overflow: hidden;
+    .context{
+        max-width: 1600px;
+        width: 82.5%;
+        margin: 0 auto;
+        .devlopment-para{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;        
+        }
     }
 
     .sub-development{
+        padding-left: 160px;
         margin-top: 117px;
         color: white;
         display: flex;
         flex-direction: row;
         gap:87px;
         .slider-text{
+            flex-shrink: 0;
             display: flex;
             justify-content: center;
             flex-direction: column;
-           width: 233px;
+            width: 233px !important;
             h3{
+                font-style: 'Excon';
                     font-size: 20px;
             }
             p{
+                font-style: 'Anek Odia';
                 margin-top: 20px;
                 font-size: 18px;
                 letter-spacing: 1%;
                 font-weight: 500;
-                line-height: 100%;
+                line-height: 1.68;
                 max-width: 235px;
             }
         }
         .slider{
             // overflow: hidden;
-            border: 1px solid red;
             max-width: 1440px; 
             margin-left: 1px; 
  
@@ -69,3 +73,120 @@
 
     }
 }
+
+@include between(320px, 680px) {
+
+    .development-work {
+        text-align: center;
+
+  
+        .context{
+
+            .devlopment-para {
+                padding-right: 0;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+  
+      .sub-development {
+        padding-left: 0px;
+        margin-top: 60px;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+  
+        .slider-text {
+          width: 100%;
+  
+          h3 {
+            font-size: 18px;
+          }
+  
+          p {
+            font-size: 14px;
+            max-width: 100%;
+            line-height: 140%;
+          }
+        }
+  
+        .slider {
+          max-width: 100%;
+          margin-left: 0;
+  
+          .swiper-slide {
+            height: 250px !important;
+          }
+  
+          .swiper-slide img {
+            width: 250px;
+            height: 250px;
+          }
+  
+          .swiper-slide.swiper-slide-active {
+            width: 250px !important;
+            object-fit: cover;
+            transition: width 0.3s;
+          }
+        }
+      }
+    }
+  }
+  
+  @include between(680px, 1000px) {
+
+    .development-work {
+      margin-top: 110px;
+      padding-left: 40px;
+      padding-right: 40px;
+  
+      .context{
+
+          .devlopment-para {
+              padding-right: 0;
+              gap: 40px;
+            }
+        }
+  
+      .sub-development {
+        padding-left: 0px;
+        margin-top: 80px;
+        gap: 50px;
+  
+        .slider-text {
+          width: 200px;
+  
+          h3 {
+            font-size: 19px;
+          }
+  
+          p {
+            font-size: 16px;
+            line-height: 130%;
+          }
+        }
+  
+        .slider {
+  
+          .swiper-slide {
+            height: 420px !important;
+          }
+  
+          .swiper-slide img {
+            object-fit: cover;
+            height: 420px ;
+            width: 320px;
+          }
+          
+  
+          .swiper-slide.swiper-slide-active {
+            height: 420px ;
+            width: 320px;
+            transition: width 0.3s;
+          }
+        }
+      }
+    }
+  }
+  

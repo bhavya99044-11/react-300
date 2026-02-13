@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 160.83px;
+    overflow: hidden;
     .container{
         max-width: 1600px;
         width: 80%;
@@ -22,6 +22,10 @@
                 width: 533.33px;
             }
             .description{
+              transition: 
+                transform 0.4s ease,
+                background-color 0.4s ease,
+                box-shadow 0.4s ease;
                 cursor: pointer;
                 padding: 60px 130.33px 61px 80px;
                 background-color: #1B1B1B;
@@ -84,18 +88,18 @@
                 z-index: 999;
                 .description {
                     z-index: 2;
-                box-shadow: 5px 0 37px rgba(0, 0, 0, 0.5);
-                height: 453px; 
-                background-color: #094FA4;
-                padding: 60px 130.33px 0px 80px;
+                    box-shadow: 5px 0 37px rgba(0, 0, 0, 0.5);
+                    height: 453px; 
+                    background-color: #094FA4;
+                    padding: 60px 130.33px 0px 80px;
 
-                .hire-image{
-                    z-index: 999;
-                    opacity: 1;
-                }
-                h4{
-                    opacity: 5%;
-                }
+                    .hire-image{
+                        z-index: 999;
+                        opacity: 1;
+                    }
+                    h4{
+                        opacity: 5%;
+                    }
                 }
             }
         }
@@ -107,7 +111,6 @@
 @include between(680px, 1000px) {
 
     .hire-developer {
-      margin-top: 100px;
   
       .container {
   
@@ -142,8 +145,7 @@
             }
   
             .hire-image {
-              right: -60px;
-              top: 80px;
+              display: none;
   
               img {
                 width: 150px;
@@ -169,25 +171,27 @@
   @include between(320px, 679px) {
 
     .hire-developer {
-      margin-top: 80px;
       .container {
         display: flex;
         align-items: center;
         flex-direction: column;
         width: 80%;
+        text-align: center;
         .swiper-wrapper {
-   
+          align-items: stretch !important;
+          // display: flex;
+          // justify-content: flex-start;
           .swiper-slide{
-            width: 100%;
+            width: auto !important;
             display: flex;
             align-items: center;
             justify-content: center;              
               .description {
-                  width: 280px;
-            padding: 30px;
+                width: 100% !important;
+                max-width: 320px;            padding: 30px;
             align-items: center;
             text-align: center;
-  
+            height: 300px;
             h2 {
               font-size: 36px;
             }
@@ -208,8 +212,7 @@
             
             .hire-image {
                 position: relative;
-                top: 20px;
-                right: 0;
+                display: none;
                 
                 img {
                     width: 120px;

@@ -3,9 +3,11 @@
 @use '../../styles/variables' as v;
 
 .header {
+    font-family: 'Anek Odia', sans-serif;
     padding-top: 30px;
-    padding-left: v.$screen-padding;
-    padding-right: v.$screen-padding;
+    max-width: 1600px;
+    width: 82.5%;
+    margin: 0 auto;
     .mi-logo {
       width: 150px;
       height: 54px;
@@ -19,31 +21,34 @@
     }
         span{
             color: white;
-            font-weight: 600;
+            font-weight: 500;
+            font-size: 18px;
+            margin-left: 10px;
+            margin-top: 2px;
         }
 
         .icon{
             color: white;
         }
 
-    @include between(680px,980px){
+    @include between(680px,1000px){
         .header{
-            padding-left: v.$responsive-screen-padding;
-            padding-right: v.$responsive-screen-padding;
-            .company-contact{
-                flex-direction: column; 
-                gap:4px;
-            }
+       
+           
             
             .verticle-line{
                 display: none;
             }
         }
+
+        .company-contact{
+            display: none;
+
+        }
     }
 
     @include between(320px,680px){
-        padding-left: v.$responsive-screen-padding;
-        padding-right: v.$responsive-screen-padding;
+  
         .company-contact{
             display: none;
         }

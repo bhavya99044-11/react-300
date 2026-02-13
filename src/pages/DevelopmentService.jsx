@@ -26,7 +26,7 @@ const DevelopmentService = () => {
   return (
     <div className="development-service">
       <ModalHeading text="Game Development Services" />
-      <ModalPara text="Mind Inventory is a game development studio that builds outstanding games in 2D and 3D dimensions." />
+      <ModalPara width="643px" text="Mind Inventory is a game development studio that builds outstanding games in 2D and 3D dimensions." />
       <div className="service-caraousel">
         <Swiper
           modules={[FreeMode, Pagination,Navigation]}
@@ -48,8 +48,12 @@ const DevelopmentService = () => {
               spaceBetween: 10,
             },
             1400: {
-              slidesPerView: 3.5,
-              spaceBetween: 30,
+              slidesPerView: 2.5,
+              spaceBetween: 20,
+            },
+            1600: {
+              slidesPerView: 3,
+              spaceBetween: 20,
             },
             1800: {
               slidesPerView: 3.5,
@@ -67,27 +71,27 @@ const DevelopmentService = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="service-block">
+            <div className="service-block ar-vr">
               <div className="service-image">
-                <img src="../../public/unity-game.png" />
+                <img src="../../public/ar-vr.png" />
               </div>
-              <p className="">Unity 3D Game Development</p>
+              <p className="">AR / VR Game Development</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="service-block">
+            <div className="service-block unreal">
               <div className="service-image">
-                <img src="../../public/unity-game.png" />
+                <img src="../../public/unreal-engine.png" />
               </div>
-              <p className="">Unity 3D Game Development</p>
+              <p className="">Unreal Engine Game Development</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="service-block">
+            <div className="service-block html">
               <div className="service-image">
-                <img src="../../public/unity-game.png" />
+                <img src="../../public/HTML5.png" />
               </div>
-              <p className="">Unity 3D Game Development</p>
+              <p className="">HTML5 Game Development</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>

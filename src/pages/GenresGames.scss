@@ -25,7 +25,8 @@
         .game-box{
             width: 233px;
             height: 233px;
-            background-color: #262626;
+            background: #262626;
+            transition: background 0.2s ease-in-out;
             // background: linear-gradient(to right, #ED184F, #B20A36);
             display: flex;
             justify-content: center;
@@ -59,12 +60,16 @@
 @include between(680px,1000px)
 {
     .genres-games{
-        text-align: center;
+        // text-align: center;
     }
 
     .genres-pages{
         .genres-caraousel{
-
+            .swiper-wrapper{
+                display: flex;
+                flex-wrap: nowrap;
+                padding-left: 50px;
+            }
             margin-top: 70px;
             .genres-swiper{
                 padding-left: 0%;

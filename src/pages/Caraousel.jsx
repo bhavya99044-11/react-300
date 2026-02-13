@@ -8,7 +8,7 @@ const Caraousel = () => {
       <div className='caraousel-page'>
           <div className='black-shadow'></div>
             <div className='caraousel-left'></div>
-          <div className='pt-25'><InfiniteCaraousel/></div> 
+          <div className=''><InfiniteCaraousel/></div> 
       </div>
     </div>
   )

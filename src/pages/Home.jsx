@@ -14,10 +14,11 @@ const Home = () => {
         <h2 className="flex items-center justify-center">Amazing Games</h2>
         <p>Helping our clients make the domain of game better with our services.</p>
       </div>
-      <Button text="Request a quote" className="mt-18"/>
+      <Button text="Request a quote"/>
       <div className="left-blur-circle"/>
       <div className="right-blur-circle"/>
       <img src="scroll.png" className="scroll-image" alt="Scroll Image"/>
+      <div className="bottom-blur"/>
     </div>
   );
 };

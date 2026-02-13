@@ -9,25 +9,25 @@ export const developmentWork=[
         id:2,
         title:'Test Hanuman',
         context:'Bhavya Inventory is a game development studio that builds outstanding games in 2D and 3D dimensions.',
-        image:'hanuman.png'
+        image:'speed-finger.png'
     },
     {
         id:3,
         title:'Bhavya Hanuman',
         context:'Bhavya Inventory is a game development studio that builds outstanding games in 2D and 3D dimensions.',
-        image:'hanuman.png'
+        image:'AR-sports.png'
     },
     {
         id:4,
         title:'Vishal Hanuman',
         context:'Vishal Inventory is a game development studio that builds outstanding games in 2D and 3D dimensions.',
-        image:'hanuman.png'
+        image:'2-cars.png'
     },
     {
         id:5,
         title:'Ayush Hanuman',
         context:'Ayush Inventory is a game development studio that builds outstanding games in 2D and 3D dimensions.',
-        image:'hanuman.png'
+        image:'ROFL.png'
     },
     {
         id:6,

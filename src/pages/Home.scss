@@ -3,17 +3,20 @@
 
 
 .home{
-    padding-left: 100px;
-    padding-right: 100px;
-    height: 86%;
+    height: 87vh;
     position: relative;
+    margin-top: 45px;
+    overflow: hidden;
     .content{
         color: white;
         max-width: 866px;
         position: relative;
+        margin-bottom: 70px;
         h2{
+            letter-spacing: 0.4px;
             font-weight: 700;
-            font-size: 80px;    
+            font-size: 80px;   
+            font-family: 'Excon', sans-serif;
             span{
                 font-weight: 700;
             font-size: 80px;  
@@ -31,14 +34,16 @@
         }
 
         div{
-            top:75px;
+            top:90px;
             position: absolute;
             width: 100%;
-            height: 60px;
+            height: 90px;
             background-image: linear-gradient(-90deg, black 0%, black 47%, black 100%);
             border-radius: 100px;
-            filter: blur(20px);        }
+            filter: blur(30px);      
+          }
         p{
+            font-family: 'Anek Odia', sans-serif;
             text-align: center;
             font-weight: 400;
             font-size: 20px;
@@ -66,18 +71,27 @@
     .right-blur-circle{
         position: absolute;
         bottom: 0;
-        left :-120px;
-        width: 527;
+        right: -300px;
+        width: 527px;
         height: 527px;
         border-radius: 100%;
         background-image: linear-gradient(-90deg, #3B3F41 0%, #3B3F41 47%, #3B3F41 50%);
         filter: blur(100px);
     }
+
+    .bottom-blur{
+            position: absolute;
+            bottom: -50px;
+            width: 100%;
+            height: 90px;
+            background-image: linear-gradient(-90deg, black 0%, black 47%, black 100%);
+            border-radius: 100px;
+            filter: blur(30px);      
+    }
 }
     @include between(680px,980px){
         .home{
-            padding-left: v.$responsive-screen-padding;
-            padding-right: v.$responsive-screen-padding;
+
             .content{
                 h2{
                 display: flex;
@@ -97,6 +111,7 @@
                 }
             div{
                 top:90px;
+                height: 50px;
                 width: 80%;
             }
             }
@@ -105,16 +120,15 @@
                 height: 80px;
                 width: 80px;
             }
-            .right-blur-circle{
-
+            .right-blur-circle,.left-blur-circle{
+                display: none;
             }
     }
     }
 
     @include between(320px,680px){
         .home{
-            padding-left: v.$responsive-screen-padding;
-            padding-right: v.$responsive-screen-padding;
+
             .content{
                 h2{
                 display: flex;
@@ -131,7 +145,7 @@
                     span{
                         font-weight: 500;
                         font-size: 30px;   
-                    }
+                    }            
                 }
             h2:nth-of-type(2){
                 font-size: 29px;   
@@ -139,12 +153,16 @@
             div{
                 top:40px;
                 width: 80%;
+                height: 60px;
             }
         }
 
         .scroll-image{
-            height: 80px;
-            width: 80px;
+            display: none;
+        }
+
+        .right-blur-circle,.left-blur-circle{
+            display: none;
         }
     }
     }

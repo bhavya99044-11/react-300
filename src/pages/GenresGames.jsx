@@ -32,7 +32,7 @@ const GenresGames = () => {
                 spaceBetween: 30,
                 },
                 1000: {
-                slidesPerView: 5.5,
+                slidesPerView: 6.5,
                 spaceBetween: 40,
                 },
             }}
@@ -77,6 +77,13 @@ const GenresGames = () => {
                 <div className='game-box'>
                     <img src="kids.png"/>
                     <p>Kids Games</p>
+                    <img className='bg-image' src='bg-game.png' />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='game-box'>
+                    <img src="kids.png"/>
+                    <p>Multiplayer Games</p>
                     <img className='bg-image' src='bg-game.png' />
                 </div>
               </SwiperSlide>

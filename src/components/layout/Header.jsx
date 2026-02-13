@@ -13,16 +13,18 @@ const Header = () => {
       <div className="flex flex-row gap-8">
       <div className="flex flex-row items-center justify-between company-contact">
         <div className="flex items-center justify-center">
-          <RiMailSendLine className="mr-1 icon" />
+          <RiMailSendLine size={24} className=" icon" />
           <span>sales@mindinventory.com</span>
         </div>
         <div className="verticle-line ml-5 mr-5"></div>
         <div className="flex items-center justify-center">
-          <IoIosCall className="mr-1 icon" />
+          <IoIosCall size={24} className="icon" />
           <span>+1-216-609-0691</span>
         </div>
       </div>
+      <div className="flex items-center justify-center">
         <Button text="Contact Us"/>
+        </div>
       </div>
     </div>
   );

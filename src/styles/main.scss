@@ -16,6 +16,9 @@ body{
   font-style: normal;
   font-display: swap;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 .app{
   // max-width:v.$screen  -width;
@@ -27,7 +30,7 @@ body{
 .main{
   background-color: #000000;
   height: 100vh;
-  width: auto;
+  width: 100%;
   position: relative;
   background-image: url('cam-bueno-orco-rookies-low 1.png');
   background-size: cover;
@@ -41,7 +44,7 @@ body{
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -81,3 +84,6 @@ body{
   flex-direction: column;
 }
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

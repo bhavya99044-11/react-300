@@ -3,11 +3,11 @@
 
 
 .development-service{
-    padding-left: v.$screen-padding;
-    padding-right: v.$screen-padding;
+    max-width: 1600px;
+    width: 82.5%;
+    margin: 0 auto;
     color: #ffffff;
     z-index: 50;
-    margin-top: 160px;
     display: flex;
     flex-direction: column;
 
@@ -48,6 +48,22 @@
                 }
 
             }
+            .ar-vr{
+                background: linear-gradient(to right, #764949, #321419);
+                .service-image{
+                    img{
+                        top: -85px;           
+                        left: 10px;
+                    }
+                }                
+            }
+            .unreal{
+                background: linear-gradient(to right, #673AB7, #512DA8);
+            }
+            .html{
+                background: linear-gradient(to right, #EF956E, #E87449);
+            }
+
         }
     }
 
@@ -87,8 +103,7 @@
 @include between(680px,1000px)
 {
     .development-service{
-        padding-left: v.$responsive-screen-padding;
-        padding-right: v.$responsive-screen-padding;
+
         .service-caraousel{
             margin-top: 80px;
             .service-content{
@@ -125,8 +140,6 @@
 @include between(320px,680px)
 {
     .development-service{
-        padding-left: v.$responsive-screen-padding;
-        padding-right: v.$responsive-screen-padding;
         .service-caraousel{
             margin-top: 50px;
             .service-content{

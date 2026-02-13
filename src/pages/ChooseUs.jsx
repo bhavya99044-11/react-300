@@ -27,14 +27,14 @@ const ChooseUs = () => {
             </div>
             <div className='box-second'>
                 <div className='box'>
-                    <h2>1600+</h2>
-                    <h3>Happy Clients</h3>
+                    <h2>2500+</h2>
+                    <h3>Project Delivered</h3>
                 </div>                
                 <div className='empty-box box'>
                 </div>
                 <div className='box'>
-                    <h2>1600+</h2>
-                    <h3>Happy Clients</h3>
+                    <h2>100+</h2>
+                    <h3>Unicorn Clients</h3>
                 </div>
             </div>
         </div>
