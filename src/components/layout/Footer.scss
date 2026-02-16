@@ -1,0 +1,324 @@
+// Variables
+$color-bg: #0a0a0a;
+$color-text: #ffffff;
+$color-text-muted: #aaaaaa;
+$color-text-dark: #555555;
+$color-border: #1a1a1a;
+$color-border-input: #333333;
+$color-primary: #ff1654;
+$color-primary-dark: #ff0844;
+
+$spacing-sm: 15px;
+$spacing-md: 30px;
+$spacing-lg: 50px;
+$spacing-xl: 80px;
+$spacing-xxl: 100px;
+
+$transition-default: 0.3s ease;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin gradient-primary {
+    background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+}
+
+// Base Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: $color-bg;
+    color: $color-text;
+}
+
+// Contact Footer Section
+.contact-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    border-top: 1px solid $color-border;
+
+    &__left {
+        padding: $spacing-xl $spacing-xxl;
+        border-right: 1px solid $color-border;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__right {
+        padding: $spacing-xl $spacing-xxl;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: $spacing-lg;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background: $color-text;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+    }
+}
+
+// Form Styles
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    &__group {
+        position: relative;
+
+        &--phone {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 20px;
+
+            .form__select {
+                position: relative;
+            }
+
+            &::after {
+                content: '\f078';
+                font-family: 'Font Awesome 6 Free';
+                font-weight: 900;
+                position: absolute;
+                left: 90px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: $color-text-dark;
+                pointer-events: none;
+                font-size: 12px;
+            }
+        }
+
+        &--country::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $color-text-dark;
+            pointer-events: none;
+            font-size: 12px;
+        }
+    }
+
+    &__input,
+    &__select,
+    &__textarea {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $color-border-input;
+        padding: $spacing-sm 0;
+        color: $color-text;
+        font-size: 16px;
+        font-family: inherit;
+        outline: none;
+        transition: border-color $transition-default;
+
+        &::placeholder {
+            color: $color-text-dark;
+        }
+
+        &:focus {
+            border-bottom-color: #666666;
+        }
+    }
+
+    &__select {
+        appearance: none;
+        cursor: pointer;
+        color: $color-text-dark;
+        padding-right: $spacing-md;
+
+        option {
+            background: $color-border;
+            color: $color-text;
+        }
+    }
+
+    &__textarea {
+        resize: vertical;
+        min-height: 60px;
+    }
+
+    &__button {
+        align-self: flex-start;
+        padding: 18px 45px;
+        @include gradient-primary;
+        color: $color-text;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all $transition-default;
+        margin-top: 20px;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba($color-primary, 0.3);
+        }
+    }
+}
+
+// Contact Info
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+    &__location {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__header {
+        @include flex-center;
+        gap: 10px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    &__icon {
+        font-size: 18px;
+    }
+
+    &__address {
+        color: $color-text-muted;
+        line-height: 1.6;
+        font-size: 15px;
+        margin-left: 28px;
+    }
+
+    &__phone {
+        @include flex-center;
+        gap: 10px;
+        color: $color-text;
+        font-size: 16px;
+        margin-left: 28px;
+        margin-top: $spacing-sm;
+
+        i {
+            font-size: 16px;
+        }
+    }
+}
+
+// Footer Bottom
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $spacing-xl;
+
+    &__website,
+    &__email {
+        @include flex-center;
+        gap: 12px;
+        font-size: 15px;
+
+        i {
+            font-size: 16px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm;
+    }
+
+    &__social-label {
+        font-size: 14px;
+        color: $color-text-muted;
+    }
+}
+
+// Social Icons
+.social-icons {
+    display: flex;
+    gap: $spacing-sm;
+
+    &__link {
+        color: $color-text-dark;
+        font-size: 18px;
+        transition: color $transition-default;
+
+        &:hover {
+            color: $color-text;
+        }
+    }
+}
+
+// Copyright
+.copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: $spacing-md 0;
+    border-top: 1px solid $color-border;
+    color: $color-text-dark;
+    font-size: 13px;
+    margin-top: 40px;
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .contact-footer {
+        grid-template-columns: 1fr;
+
+        &__left {
+            border-right: none;
+            border-bottom: 1px solid $color-border;
+        }
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-footer {
+        &__left,
+        &__right {
+            padding: $spacing-lg $spacing-md;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $spacing-md;
+    }
+}

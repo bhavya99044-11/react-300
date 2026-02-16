@@ -26,7 +26,7 @@ const Index = () => {
         <Conversation/>
         <ChooseUs/>
         <ClientSay/>
-        {/* <Awards/> */}
+        <Awards/>
     </div>
   )
 }

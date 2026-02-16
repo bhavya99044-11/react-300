@@ -10,20 +10,19 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
 const ClientSay = () => {
+  const prevClick = () => {
+    const target = document.querySelectorAll(".swiper-button-prev");
+    target[1].click();
+  };
 
-    const prevClick =()=>{
-        const target = document.querySelectorAll('.swiper-button-prev')
-        target[1].click()
-      }
-    
-      const nextClick =()=>{
-          const target = document.querySelectorAll('.swiper-button-next')
-        target[1].click();
-      }
+  const nextClick = () => {
+    const target = document.querySelectorAll(".swiper-button-next");
+    target[1].click();
+  };
 
   return (
     <div className="client-say">
-        <div className="title">What Our Clients Say</div>
+      <div className="title">What Our Clients Say</div>
       <div className="client-box">
         <div className="border" />
         <div className="context">
@@ -43,7 +42,7 @@ const ClientSay = () => {
                   handled smoothly.
                 </p>
                 <div className="profile">
-                  <img src="profile.png" />
+                  <img src="profile.png" alt="Profile" />
                   <div>
                     <h3>Andrej Fister</h3>
                     <h5>-Thailand</h5>
@@ -52,61 +51,64 @@ const ClientSay = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-            <div className="data">
-            <p>
-              MindInventory developed and launched an Android and iOS app from
-              scratch. Additionally, they provided free support for two months
-              after the launch to ensure bugs and updates were handled smoothly.
-            </p>
-            <div className="profile">
-              <img src="profile.png" />
-              <div>
-                <h3>Andrej Fister</h3>
-                <h5>-Thailand</h5>
+              <div className="data">
+                <p>
+                  MindInventory developed and launched an Android and iOS app
+                  from scratch. Additionally, they provided free support for two
+                  months after the launch to ensure bugs and updates were
+                  handled smoothly.
+                </p>
+                <div className="profile">
+                  <img src="profile.png" alt="Profile" />
+                  <div>
+                    <h3>Andrej Fister</h3>
+                    <h5>-Thailand</h5>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div className="data">
-          <p>
-              MindInventory developed and launched an Android and iOS app from
-              scratch. Additionally, they provided free support for two months
-              after the launch to ensure bugs and updates were handled smoothly.
-            </p>
-            <div className="profile">
-              <img src="profile.png" />
-              <div>
-                <h3>Andrej Fister</h3>
-                <h5>-Thailand</h5>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="data">
+                <p>
+                  MindInventory developed and launched an Android and iOS app
+                  from scratch. Additionally, they provided free support for two
+                  months after the launch to ensure bugs and updates were
+                  handled smoothly.
+                </p>
+                <div className="profile">
+                  <img src="profile.png" alt="Profile" />
+                  <div>
+                    <h3>Andrej Fister</h3>
+                    <h5>-Thailand</h5>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div className="data">
-          <p>
-              MindInventory developed and launched an Android and iOS app from
-              scratch. Additionally, they provided free support for two months
-              after the launch to ensure bugs and updates were handled smoothly.
-            </p>
-            <div className="profile">
-              <img src="profile.png" />
-              <div>
-                <h3>Andrej Fister</h3>
-                <h5>-Thailand</h5>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="data">
+                <p>
+                  MindInventory developed and launched an Android and iOS app
+                  from scratch. Additionally, they provided free support for two
+                  months after the launch to ensure bugs and updates were
+                  handled smoothly.
+                </p>
+                <div className="profile">
+                  <img src="profile.png" alt="Profile" />
+                  <div>
+                    <h3>Andrej Fister</h3>
+                    <h5>-Thailand</h5>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          </SwiperSlide>
+            </SwiperSlide>
           </Swiper>
           <div className="bg-image">
-            <img src="ticks.png" />
+            <img src="ticks.png" alt="Quotes" />
           </div>
         </div>
         <div className="buttons">
-          <FaArrowLeft onClick={()=>prevClick()} className="icons" />
-          <FaArrowRight onClick={()=>nextClick()} className="icons" />
+          <FaArrowLeft onClick={() => prevClick()} className="icons" />
+          <FaArrowRight onClick={() => nextClick()} className="icons" />
         </div>
       </div>
     </div>
