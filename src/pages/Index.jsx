@@ -10,6 +10,8 @@ import InfiniteCaraousel from '../components/common/InfiniteCaraousel'
 import GameDesign from './GameDesign'
 import Conversation from './Conversation'
 import ChooseUs from './ChooseUs'
+import ClientSay from './ClientSay'
+import Awards from './Awards'
 
 const Index = () => {
   return (
@@ -23,6 +25,8 @@ const Index = () => {
         <GameDesign/>
         <Conversation/>
         <ChooseUs/>
+        <ClientSay/>
+        {/* <Awards/> */}
     </div>
   )
 }
