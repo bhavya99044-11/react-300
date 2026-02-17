@@ -54,14 +54,29 @@
   transform: rotate(-30deg) skewX(30deg);
   border-radius: 18px;
   position: relative;
+  z-index: 100;
 }
-
-.r-hex-wrapper{
-
+.r-hex-out{
+  overflow: hidden;
+  display: inline-block;
+  width: 340px;
+  height: 300px; 
+  transform: rotate(-30deg) skewX(30deg);
+  border-radius: 18px;
+  position: relative;
 }
 
 .r-hex *,
 .r-hex *:before {
+  display: block;
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+
+.r-hex-out *,
+.r-hex-out *:before {
   display: block;
   overflow: hidden;
   width: inherit;
@@ -74,8 +89,20 @@
   transition: opacity 0.75s;
   cursor: pointer;
 }
+.r-hex-inner-out {
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  transition: opacity 0.75s;
+  cursor: pointer;
+}
+
 
 .r-hex.purple .r-hex-inner:before {
+  background: linear-gradient(to right, #5d0aaf, #7d23d6);
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  content: "";
+}
+
+.r-hex-out.purple .r-hex-inner-out:before {
   background: linear-gradient(to right, #5d0aaf, #7d23d6);
   transform: skewX(-30deg) rotate(60deg) skewX(30deg);
   content: "";
@@ -86,16 +113,33 @@
   transform: skewX(-30deg) rotate(60deg) skewX(30deg);
   content: "";
 }
+.r-hex-out.coral .r-hex-inner-out:before {
+  background: linear-gradient(to right, #ff8a80, #ff6b9d);
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  content: "";
+}
 
 .r-hex.teal .r-hex-inner:before {
   background: linear-gradient(to right, #4db6ac, #26a69a);
   transform: skewX(-30deg) rotate(60deg) skewX(30deg);
   content: "";
 }
+.r-hex-out.teal .r-hex-inner-out:before {
+  background: linear-gradient(to right, #4db6ac, #26a69a);
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  content: "";
+}
 
 .r-hex.burgundy .r-hex-inner:before {
-  background: linear-gradient(to right, #8e4162, #a94f6d);
+  background: linear-gradient(to right, #8e4162, #a94f6d) !important;
   transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  content: "";
+  z-index: 999;
+}
+.r-hex-out.burgundy .r-hex-inner-out:before {
+  background: linear-gradient(to right, red, red);
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  z-index: 50;
   content: "";
 }
 
@@ -103,6 +147,19 @@
   background: linear-gradient(to right, #5c6bc0, #7986cb);
   transform: skewX(-30deg) rotate(60deg) skewX(30deg);
   content: "";
+}
+.r-hex-out.blue .r-hex-inner-out:before {
+  background: linear-gradient(to right, #5c6bc0, #7986cb);
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  content: "";
+}
+
+.r-hex-wrapper-out{
+  position: absolute;
+    top: -16px;
+    left: -19px;
+    opacity: 0.5;
+    z-index: 50;
 }
 
 .hexagon {

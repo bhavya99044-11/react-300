@@ -59,6 +59,11 @@ const Awards = () => {
                     <div className={`r-hex-inner ${award.color}`}></div>
                   </div>
                 </div>
+                <div className={`r-hex-wrapper-out ${award.color}`}>
+                  <div className={`r-hex-out ${award.color}`}>
+                    <div className={`r-hex-inner-out ${award.color}`}></div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
