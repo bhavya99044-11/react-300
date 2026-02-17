@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Virtual, Navigation, Pagination } from "swiper/modules";
 import { FreeMode } from 'swiper/modules';
 import 'swiper/css/free-mode';
+import Button from "../components/common/Button";
 
 
 const HireDeveloper = () => {
@@ -88,6 +89,9 @@ const HireDeveloper = () => {
               </div>
             </SwiperSlide>
           </Swiper>
+        </div>
+        <div className="button">
+        <Button text="Talk with us"/>
         </div>
       </div>
     </div>

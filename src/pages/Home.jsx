@@ -11,7 +11,7 @@ const Home = () => {
           We Design <span>& Devel<FaRegCirclePlay size={71} className="icon" />p</span>
         </h2>
         <div className=""></div>
-        <h2 className="flex items-center justify-center">Amazing Games</h2>
+        <h2 className="flex items-center justify-center">Amazing<span>Games</span></h2>
         <p>Helping our clients make the domain of game better with our services.</p>
       </div>
       <Button text="Request a quote"/>

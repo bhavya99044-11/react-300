@@ -1,80 +1,301 @@
+@use '../styles/mixins' as *;
+
+
 .awards {
+  max-width: 1600px;
+  width: 88%;
+  margin: 0 auto;
+  color: #fff;
+
+  &__container {
     max-width: 1600px;
-    width: 82.5%;
     margin: 0 auto;
-    color: #fff;
-    
-  
-    &__container {
-      max-width: 1600px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 60px;
-    }
-  
-    &__left {
-      max-width: 480px;
-  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+  }
 
-    }
-  
-    &__right {
-      display: grid;
+
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    align-items: center;
+    .awards-top{
       display: flex;
-      max-width: 900px;
-      gap: 40px;
+      flex-direction: row;
+    }
+    .awards-bottom{
+      display: flex;
       justify-content: center;
+      flex-direction: row;
+      margin-top: -13px;
+      gap:-10px;
+    }
+    // .hexagon:nth-child(4),
+    // .hexagon:nth-child(5) {
+    //   grid-column: span 1;
+    // }
+    
+    // .hexagon:nth-child(4) {
+    //   margin-left: 50%;
+    // }
+  }
+}
+
+.r-hex {
+  overflow: hidden;
+  display: inline-block;
+  width: 300px;
+  height: 260px; 
+  transform: rotate(-30deg) skewX(30deg);
+  border-radius: 18px;
+  position: relative;
+}
+
+.r-hex-wrapper{
+
+}
+
+.r-hex *,
+.r-hex *:before {
+  display: block;
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+
+.r-hex-inner {
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  transition: opacity 0.75s;
+  cursor: pointer;
+}
+
+.r-hex.purple .r-hex-inner:before {
+  background: linear-gradient(to right, #5d0aaf, #7d23d6);
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  content: "";
+}
+
+.r-hex.coral .r-hex-inner:before {
+  background: linear-gradient(to right, #ff8a80, #ff6b9d);
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  content: "";
+}
+
+.r-hex.teal .r-hex-inner:before {
+  background: linear-gradient(to right, #4db6ac, #26a69a);
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  content: "";
+}
+
+.r-hex.burgundy .r-hex-inner:before {
+  background: linear-gradient(to right, #8e4162, #a94f6d);
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  content: "";
+}
+
+.r-hex.blue .r-hex-inner:before {
+  background: linear-gradient(to right, #5c6bc0, #7986cb);
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  content: "";
+}
+
+.hexagon {
+  position: relative;
+
+  span{
+    position: absolute;
+    font-size: 40px;
+    font-family: 'Excon';
+    font-weight: 500;
+    z-index: 999;
+    bottom: 20%;
+    left: 41%;
+  }
+
+  .logo-img{
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: auto;
+      display: block;
     }
   }
+
+
+  .award-image {
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    pointer-events: none;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+// ── 680px–1000px : Tablet ─────────────────────────────────────────
+@include between(680px, 1000px) {
+  .awards {
+    width: 90%;
+
+    &__container {
+      flex-direction: column;     // stack left + right vertically
+      align-items: center;
+      gap: 40px;
+    }
+
+    &__left {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    &__right {
+      max-width: 100%;
+      align-items: center;
+
+      .awards-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .awards-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -100px;       // scaled down from -130px
+      }
+    }
+  }
+
+  // Scale hexagons down to ~200px for tablet
+  .r-hex-wrapper {
+    width: 208px;
+    height: 180px;
+    border-radius: 14px;
+  }
+
   .r-hex {
-    overflow: hidden;
-    display: inline-block;
-    margin: 4em 0;
-    width: 20em; height: 17.32em;
-    transform: rotate(-30deg) skewX(30deg);
-    border-radius: 2em;
-    position: relative;
+    width: 200px;
+    height: 173px;
+    border-radius: 12px;
+  }
 
-  }
-  .r-hex *, .r-hex *:before {
-    display: block;
-    overflow: hidden;
-    width: inherit; height: inherit;
-    border-radius: inherit;
-  }
-  .r-hex-inner {
-    transform: skewX(-30deg) rotate(60deg) skewX(30deg);
-    transition: opacity .75s;
-    cursor: pointer;
-  }
-  .r-hex.purple .r-hex-inner:before {
-    background: linear-gradient(to right , #5D0AAF,#7D23D6);
-    transform: skewX(-30deg) rotate(60deg) skewX(30deg);
-    content: '';
-  }
-  .r-hex-inner-2:before {
-    margin-top: -1.5em;
-    height: 20em;
-    transform: skewX(-30deg) rotate(-90deg);
-    background: url(https://assets.codepen.io/2017/17_05_a_amur_leopard_34.jpg);
-    background-size: cover;
-    line-height: 20em;
-    text-align: center;
-    content: 'Hello, be a nice kitty...';
-  }
-  .r-hex-inner:hover { opacity: 1; }
+  .hexagon {
+    width: 208px;
+    height: 180px;
 
-  .hexagon{
-    position: relative;
-      .award-image{
-          position: absolute;
-          top: 50%;
-          z-index: 999;
-          left: 23%;
-          width: 176px;
-          height: 115px;
-        }
+    span {
+      font-size: 26px;
+      bottom: 18%;
+      left: 38%;
     }
-  
+
+    .logo-img {
+      top: 25%;
+
+      img {
+        width: 70px;
+      }
+    }
+
+    .award-image {
+      top: 65%;
+
+      img {
+        width: 130px;
+      }
+    }
+  }
+}
+
+// ── 320px–680px : Mobile ──────────────────────────────────────────
+@include between(320px, 680px) {
+  .awards {
+    width: 95%;
+
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    &__left {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    &__right {
+      max-width: 100%;
+      width: 100%;
+      align-items: center;
+
+      // Stack all hexagons in a single centered column on mobile
+      .awards-top,
+      .awards-bottom {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        gap: 16px;
+      }
+    }
+  }
+
+  // Scale hexagons down to ~150px for mobile
+  .r-hex-wrapper {
+    width: 156px;
+    height: 135px;
+    border-radius: 10px;
+  }
+
+  .r-hex {
+    width: 150px;
+    height: 130px;
+    border-radius: 9px;
+  }
+
+  .hexagon {
+    width: 156px;
+    height: 135px;
+
+    span {
+      font-size: 20px;
+      bottom: 16%;
+      left: 36%;
+    }
+
+    .logo-img {
+      top: 25%;
+
+      img {
+        width: 50px;
+      }
+    }
+
+    .award-image {
+      top: 65%;
+
+      img {
+        width: 100px;
+      }
+    }
+  }
+}
